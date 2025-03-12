@@ -9,8 +9,8 @@
         body {
             font-family: 'Prompt', sans-serif;
             margin: 0;
-            padding: 20px;
-            background: url(100.jpg) no-repeat center center fixed;
+            padding: 0;
+            background: url('https://source.unsplash.com/1600x900/?finance,tax') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -19,35 +19,40 @@
             min-height: 100vh;
         }
 
-        /* ปรับสไตล์ของรูปภาพ */
-        .image-container {
+        /* ส่วนหัว */
+        .header {
             display: flex;
-            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 123, 255, 0.9);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: bold;
         }
 
-        img {
-            max-width: 100%;
-            width: 300px;
+        .header img {
+            width: 50px;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         /* กล่องเนื้อหา */
         .container {
             width: 90%;
             max-width: 700px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: left;
+            text-align: center;
         }
 
         /* ปรับลิงก์ให้ดูสวยขึ้น */
         .custom-link {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             color: #007bff;
             text-decoration: none;
@@ -55,6 +60,7 @@
             padding: 12px;
             border-radius: 8px;
             transition: all 0.3s ease-in-out;
+            background: rgba(0, 123, 255, 0.1);
         }
 
         .custom-link:hover {
@@ -62,29 +68,10 @@
             color: white;
         }
 
-        /* ปรับสไตล์ของรายการ */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 15px;
-        }
-         /* กล่องเนื้อหาหลัก */
-         .container {
-            width: 90%;
-            max-width: 800px;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
         /* ปรับปุ่มกลับหน้าหลัก */
         .back-btn {
             display: inline-block;
+            margin-top: 20px;
             padding: 12px 18px;
             background-color: #28a745;
             color: white;
@@ -97,15 +84,14 @@
 
         .back-btn:hover {
             background-color: #218838;
+            transform: scale(1.05);
         }
 
-        /* จัดปุ่มให้อยู่ตรงกลาง */
-        nav {
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
+
+    <!-- หัวข้อหลัก -->
     <div class="header">
         <img src="icon.png" alt="icon">
         ตารางคำนวณภาษีสินค้าสรรพสามิต
@@ -113,15 +99,13 @@
 
     <!-- กล่องเนื้อหา -->
     <div class="container">
-        <ul>
+        <ul style="list-style: none; padding: 0;">
             <li><a href="ตารางคำนวณภาษี.xlsx" class="custom-link">📌 โปรแกรมช่วยคำนวณภาษีสรรพสามิตสำหรับสินค้าเครื่องดื่ม</a></li>
         </ul>
     </div>
-        
+
     <!-- ปุ่มกลับหน้าหลัก -->
-    <nav>
-        <a href="index.html" class="back-btn">🔙 กลับไปหน้าหลัก</a>
-    </nav>
+    <a href="index.html" class="back-btn">🔙 กลับไปหน้าหลัก</a>
 
 </body>
 </html>
