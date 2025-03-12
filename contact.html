@@ -5,76 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ติดต่อสอบถาม</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            text-align: center;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
-        header {
-            background-color: #0056b3;
+
+        /* พื้นหลัง */
+        body {
+            background-image: url(100.jpg) no-repeat center center/cover;
             color: white;
-            padding: 15px;
-        }
-        nav {
-            background-color: #007bff;
-            padding: 10px;
             text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .content {
             padding: 20px;
         }
-        .back-button {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
+
+        /* กล่องข้อมูล */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
         }
-        .back-button:hover {
-            background-color: #0056b3;
+
+        /* หัวข้อ */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+
+        /* ข้อมูลติดต่อ */
+        .contact-info {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* ปุ่ม */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: white;
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #0056b3, #0080ff);
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <header>
+
+    <div class="container">
         <h1>ติดต่อสอบถาม</h1>
-    </header>
-
-    <nav>
-        <a href="index.html">หน้าหลัก</a>
-        <a href="about.html">เกี่ยวกับสำนักงาน</a>
-        <a href="news.html">ห้องข่าว</a>
-        <a href="work.html">งานของหน่วยงาน</a>
-        <a href="tax.html">ประชาชน/ผู้เสียภาษี</a>
-        <a href="services.html">บริการอิเล็กทรอนิกส์</a>
-        <a href="download.html">ดาวน์โหลด</a>
-        <a href="contact.html">ติดต่อสอบถาม</a>
-    </nav>
-
-    <div class="content">
-        <h2>ข้อมูลการติดต่อ</h2>
-        <p>โทร: 077-xxxxxxx</p>
-        <p>Email: example@excise.go.th</p>
-        <p>ที่อยู่: 123 ถ.ตัวอย่าง อ.เมือง จ.สุราษฎร์ธานี</p>
+        <p class="contact-info">
+            📞 โทร: 077-xxxxxxx <br>
+            ✉️ Email: example@excise.go.th <br>
+            📍 ที่อยู่: 123 ถ.ตัวอย่าง อ.เมือง จ.สุราษฎร์ธานี
+        </p>
+        <a href="mailto:example@excise.go.th" class="btn">📩 ส่งอีเมลติดต่อ</a>
     </div>
-
-    <a href="index.html" class="back-button">🔙 กลับไปหน้าหลัก</a>
 
 </body>
 </html>
