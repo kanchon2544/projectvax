@@ -5,102 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โครงการและภารกิจ</title>
     <style>
-        /* พื้นหลังแบบ Gradient */
+        /* ตั้งค่าพื้นหลัง */
         body {
             font-family: 'Prompt', sans-serif;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa, #e3e6eb);
+            background: url(city.jpg) no-repeat center center fixed;
+            background-size: cover;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        /* หัวข้อหลัก */
-        .page-title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
+            justify-content: center;
+            min-height: 100vh;
         }
 
         /* ปรับสไตล์ของรูปภาพ */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
         img {
             max-width: 100%;
-            width: 250px;
+            width: 300px;
             height: auto;
-            display: block;
-            margin-bottom: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         /* กล่องเนื้อหา */
         .container {
             width: 90%;
             max-width: 700px;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             text-align: left;
         }
 
-        /* สไตล์รายการโครงการแบบการ์ด */
-        .card {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .card img {
-            width: 40px;
-            height: 40px;
-        }
-
-        .card a {
-            text-decoration: none;
-            font-size: 18px;
+        /* ปรับลิงก์ให้ดูสวยขึ้น */
+        .custom-link {
+            font-size: 20px;
             font-weight: bold;
             color: #007bff;
-            transition: 0.3s;
+            text-decoration: none;
+            display: block;
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
         }
 
-        .card:hover a {
-            color: #0056b3;
+        .custom-link:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        /* ปรับสไตล์ของรายการ */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
         }
 
         /* ปรับปุ่มกลับหน้าหลัก */
         .back-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: inline-block;
             padding: 12px 18px;
-            background: linear-gradient(135deg, #28a745, #218838);
+            background-color: #28a745;
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-size: 18px;
             font-weight: bold;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
+            transition: all 0.3s ease-in-out;
         }
 
         .back-btn:hover {
-            transform: scale(1.05);
-            background: #1e7e34;
+            background-color: #218838;
         }
 
         /* จัดปุ่มให้อยู่ตรงกลาง */
@@ -111,23 +97,20 @@
 </head>
 <body>
 
-    <h1 class="page-title">🌍 โครงการและภารกิจ</h1>
-    
-    <img src="colum.jpg" alt="ภาพประกอบข่าว">
+    <!-- รูปภาพ -->
+    <div class="image-container">
+        <img src="colum.jpg" alt="ภาพประกอบข่าว">
+    </div>
 
+    <!-- กล่องเนื้อหา -->
     <div class="container">
         <ul>
-            <li class="card">
-                <img src="pin-icon.png" alt="ไอคอน">
-                <a href="https://youtube.com/shorts/SXHMnicI6Pg?si=RCLnCb0WOpZsNspp">📌 โครงการคืนสู่วานร</a>
-            </li>
-            <li class="card">
-                <img src="target-icon.png" alt="ไอคอน">
-                <a href="jotaro.mp4">🎯 แผนไปอียิปต์</a>
-            </li>
+            <li><a href="https://youtube.com/shorts/SXHMnicI6Pg?si=RCLnCb0WOpZsNspp" class="custom-link">📌 โครงการคืนสู่วานร</a></li>
+            <li><a href="jotaro.mp4" class="custom-link">🎯 แผนไปอียิปต์</a></li>
         </ul>
     </div>
         
+    <!-- ปุ่มกลับหน้าหลัก -->
     <nav>
         <a href="index.html" class="back-btn">🔙 กลับไปหน้าหลัก</a>
     </nav>
