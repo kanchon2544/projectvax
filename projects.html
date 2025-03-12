@@ -4,54 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โครงการและภารกิจ</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
+        /* ตั้งค่าสไตล์พื้นฐาน */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Prompt', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
-            text-align: center;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        nav {
+
+        /* ปรับสไตล์ของรูปภาพ */
+        img {
+            max-width: 100%;
+            width: 250px;
+            height: auto;
+            display: block;
             margin-bottom: 20px;
-        }
-        .back-btn {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .back-btn:hover {
-            background-color: #0056b3;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
-        img {
-            max-width: 200%;
-            width: 20%;
-            height: auto;
+
+        /* กล่องเนื้อหา */
+        .container {
+            width: 90%;
+            max-width: 700px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: left;
+        }
+
+        /* ปรับลิงก์ให้ดูสวยขึ้น */
+        .custom-link {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
             display: block;
-            margin: 20px auto;
-                }
-                .custom-link {
-            font-size: 18px; /* ปรับขนาดตามต้องการ */
-            font-weight: bold; /* ทำให้ตัวหนา */
-            color: blue; /* กำหนดสีให้เหมือนตัวอย่าง */
-            text-decoration: none; /* ลบขีดเส้นใต้ */
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
         }
 
         .custom-link:hover {
-            text-decoration: underline; /* ทำให้มีเส้นใต้เมื่อเอาเมาส์ไปชี้ */
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* ปรับสไตล์ของรายการ */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        /* ปรับปุ่มกลับหน้าหลัก */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            background-color: #218838;
+        }
+
+        /* จัดปุ่มให้อยู่ตรงกลาง */
+        nav {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -61,8 +95,8 @@
 
     <div class="container">
         <ul>
-            <li><a href="https://youtube.com/shorts/SXHMnicI6Pg?si=RCLnCb0WOpZsNspp">โครงการคืนสู่วานร"</a></li>
-            <li><a href="jotaro.mp4">แผนไปอียิปต์</a></li>
+            <li><a href="https://youtube.com/shorts/SXHMnicI6Pg?si=RCLnCb0WOpZsNspp" class="custom-link">📌 โครงการคืนสู่วานร</a></li>
+            <li><a href="jotaro.mp4" class="custom-link">🎯 แผนไปอียิปต์</a></li>
         </ul>
     </div>
         
