@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สำนักงานสรรพสามิตพื้นที่สุราษฎร์ธานี</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav .nav-item {
+            display: inline-block;
+            position: relative;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        /* ====== Dropdown Menu Styles ====== */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            text-align: left;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* ====== สไตล์ของสไลด์โชว์ ====== */
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+            animation: fade 1s ease-in-out;
+        }
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+
+        .dots {
+            text-align: center;
+            padding: 10px;
+        }
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #007bff;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .container { max-width: 800px; margin: auto; padding: 20px; background: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 10px; }
+
+        /* สไตล์ข่าว */
+    .news-item {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .news-meta {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 10px;
+    }
+
+    .news-content {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .read-more {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+    .news-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-image {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 15px;
+    }
+
+    .news-content-container {
+        flex: 1;
+    }
+
+    .news-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .news-meta {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 10px;
+    }
+
+    .news-content {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .read-more {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>สำนักงานสรรพสามิตพื้นที่สุราษฎร์ธานี</h1>
+    </header>
+    <nav>
+        <div class="nav-item">
+            <a href="index.html">หน้าหลัก</a>
+        </div>
+
+        <div class="nav-item dropdown">
+            <a class="dropdown-btn">เกี่ยวกับสำนักงาน ▼</a>
+            <div class="dropdown-content">
+                <a href="history.html">ประวัติกรมสรรพสามิต</a>
+                <a href="structure.html">โครงสร้างองค์กร</a>
+                <a href="vision.html">วิสัยทัศน์และพันธกิจ</a>
+                <a href="policy.html">แผนยุทธศาสตร์</a>
+            </div>
+        </div>
+
+        <div class="nav-item dropdown">
+            <a class="dropdown-btn">ห้องข่าว ▼</a>
+            <div class="dropdown-content">
+                <a href="news.html">ข่าวประชาสัมพันธ์</a>
+                <a href="events.html">กิจกรรม</a>
+            </div>
+        </div>
+
+        <div class="nav-item dropdown">
+            <a class="dropdown-btn">งานของหน่วยงาน ▼</a>
+            <div class="dropdown-content">
+                <a href="projects.html">โครงการและภารกิจ</a>
+                <a href="laws.html">กฎหมายและระเบียบ</a>
+            </div>
+        </div>
+
+        <!-- เพิ่มหัวข้อที่ขาดหายไป -->
+        <div class="nav-item dropdown">
+            <a class="dropdown-btn">ประชาชน/ผู้เสียภาษี ▼</a>
+            <div class="dropdown-content">
+                <a href="tax.html">ข้อมูลภาษี</a>
+                <a href="payment.html">ช่องทางชำระภาษี</a>
+                <a href="complaints.html">ร้องเรียน/ข้อเสนอแนะ</a>
+            </div>
+        </div>
+
+        <div class="nav-item dropdown">
+            <a class="dropdown-btn">บริการอิเล็กทรอนิกส์ ▼</a>
+            <div class="dropdown-content">
+                <a href="online-reg.html">ลงทะเบียนออนไลน์</a>
+                <a href="e-payment.html">ชำระภาษีออนไลน์</a>
+            </div>
+        </div>
+
+        <div class="nav-item dropdown">
+            <a class="dropdown-btn">ดาวน์โหลด ▼</a>
+            <div class="dropdown-content">
+                <a href="forms.html">แบบฟอร์ม</a>
+                <a href="guides.html">คู่มือการใช้งาน</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="contact.html">ติดต่อสอบถาม</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h2>ยินดีต้อนรับ</h2>
+        <p>นี่คือหน้าแรกของเว็บไซต์สำนักงานสรรพสามิต</p>
+
+        <!-- สไลด์โชว์ -->
+        <div class="carousel">
+            <img src="Jojo.jpg" class="active">
+            <img src="FF.jpg">
+            <img src="rich.jpg">
+        </div>
+
+        <!-- จุดแสดงสถานะสไลด์ -->
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+    <div class="container">
+        <p style="text-align: center; color: #666;">ข่าวประชาสัมพันธ์ล่าสุด</p>
+    
+        <div class="news-item">
+            <img src="noob.jpg" alt="ข่าวแรก" class="news-image">
+            <div class="news-content-container">
+                <div class="news-title">โครตกาก วัยรุ่น FiveM โดนกระทืบ เหตุเพราะขัดได้เงินแล้วเบี้ยว</div>
+                <div class="news-meta">📅 เผยแพร่เมื่อ: 11 มีนาคม 2025 เวลา 14:30 น.</div>
+                <div class="news-content">เหตุเพราะบิดได้เงินแล้วเบี้ยว เกิดที่ประเทศไทย ในจักรวาลทางช้างเผือก</div>
+                <a href="news-detail.html" class="read-more">อ่านต่อ →</a>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="ipman.mp4" alt="ข่าวที่สอง" class="news-image">
+            <div class="news-content-container">
+                <div class="news-title">ลูกศิษย์ล้างครู!! ลูกศิษย์ใช้ชากังฟูต่อสู้กับอาจารย์ในห้องเรียน</div>
+                <div class="news-meta">📅 เผยแพร่เมื่อ: 10 มีนาคม 2025 เวลา 09:15 น.</div>
+                <div class="news-content">เหตุการณ์นี้เกิดขึ้นเมื่ออาจารย์ไม่ยอมให้เทรดรัวๆโปรเจคกับลูกศิษย์ จึงเกิดการต่อสู้</div>
+                <a href="news-detail2.html" class="read-more">อ่านต่อ →</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ทำให้เมนู Dropdown เปิด-ปิดได้
+        document.addEventListener("DOMContentLoaded", function () {
+            let dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach(function (dropdown) {
+                let btn = dropdown.querySelector(".dropdown-btn");
+                let menu = dropdown.querySelector(".dropdown-content");
+
+                btn.addEventListener("click", function (event) {
+                    event.stopPropagation(); 
+                    closeAllDropdowns();
+                    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+                });
+            });
+
+            document.addEventListener("click", function () {
+                closeAllDropdowns();
+            });
+
+            function closeAllDropdowns() {
+                document.querySelectorAll(".dropdown-content").forEach(function (menu) {
+                    menu.style.display = "none";
+                });
+            }
+        });
+
+        // สไลด์โชว์อัตโนมัติ
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".carousel img");
+        const dots = document.querySelectorAll(".dot");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                dots[i].classList.remove("active");
+            });
+            slides[index].classList.add("active");
+            dots[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index;
+            showSlide(index);
+        }
+
+        setInterval(nextSlide, 3000); // เปลี่ยนภาพทุก 3 วินาที
+    </script>
+</body>
+</html>
