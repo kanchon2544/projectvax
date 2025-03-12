@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ความรู้เรื่องภาษี</title>
+    <style>
+        /* พื้นหลังแบบไล่สี */
+        body {
+            font-family: 'Prompt', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #dde1e7, #c7d2e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* กล่องเนื้อหาหลัก */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* หัวข้อหลัก */
+        .header {
+            background: #3a6ea5;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        /* เนื้อหา */
+        .content {
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        /* รายการลิงก์ */
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .link-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .link-list img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        /* ปุ่มลิงก์ */
+        .link-list a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .link-list a:hover {
+            color: #ff4500;
+        }
+
+        /* รูปภาพ */
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- หัวข้อหลัก -->
+        <div class="header">
+            <img src="icon.png" alt="icon">
+            ความรู้เรื่องภาษี
+        </div>
+
+        <!-- เนื้อหา -->
+        <div class="content">
+            <strong>ภาพ Infographic</strong> เกี่ยวกับกระบวนงานตามพระราชบัญญัติภาษีสรรพสามิต พ.ศ. 2560
+        </div>
+
+        <!-- รายการลิงก์ -->
+        <ul class="link-list">
+            <li>
+                <img src="time.png" alt="link">
+                <a href="#">การขออนุญาตเสียภาษีชนิดอัตราภาษีสำหรับสินค้าอุตสาหกรรม</a>
+            </li>
+            <li>
+                <img src="time.png" alt="link">
+                <a href="#">การขออนุญาตเสียภาษีสำหรับน้ำมันเชื้อเพลิง</a>
+            </li>
+            <li>
+                <img src="time.png" alt="link">
+                <a href="#">หลักเกณฑ์การเสียภาษีและวิธีการแจ้งรายการขายปลีก</a>
+            </li>
+        </ul>
+
+        <!-- รูปภาพ -->
+        <div class="image-container">
+            <img src="vaxy.jpg" alt="ความรู้เรื่องภาษี">
+        </div>
+    </div>
+
+</body>
+</html>
