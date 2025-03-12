@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบคำนวณภาษีสินค้าสรรพสามิต</title>
+    <style>
+        /* ตั้งค่าพื้นหลัง */
+        body {
+            font-family: 'Prompt', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: url(100.jpg) no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* ปรับสไตล์ของรูปภาพ */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* กล่องเนื้อหา */
+        .container {
+            width: 90%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        /* ปรับลิงก์ให้ดูสวยขึ้น */
+        .custom-link {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .custom-link:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        /* ปรับสไตล์ของรายการ */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        /* ปรับปุ่มกลับหน้าหลัก */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            background-color: #218838;
+        }
+
+        /* จัดปุ่มให้อยู่ตรงกลาง */
+        nav {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- กล่องเนื้อหา -->
+    <div class="container">
+        <ul>
+            <li><a href="ตารางคำนวณภาษี.xlsx" class="custom-link">📌 โปรแกรมช่วยคำนวณภาษีสรรพสามิตสำหรับสินค้าเครื่องดื่ม</a></li>
+        </ul>
+    </div>
+        
+    <!-- ปุ่มกลับหน้าหลัก -->
+    <nav>
+        <a href="index.html" class="back-btn">🔙 กลับไปหน้าหลัก</a>
+    </nav>
+
+</body>
+</html>
